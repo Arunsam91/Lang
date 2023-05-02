@@ -1,5 +1,22 @@
 import streamlit as st
 
+from PIL import Image
+
+
+
+#opening the image
+
+image = Image.open('img.jpg')
+
+
+
+#displaying the image on streamlit app
+
+st.image(image, caption='Future is here')
+
+
+import streamlit as st
+
 
 
 
@@ -16,8 +33,8 @@ from langchain.utilities import WikipediaAPIWrapper
 os.environ['OPENAI_API_KEY'] = st.secrets["apikey"]
 
 # App framework
-st.title('🦜🔗 LANG PROMPT BY ARUN')
-prompt = st.text_input('Plug in your prompt here') 
+st.title('🦜🔗 LangChain DEMO BY ARUN')
+prompt = st.text_input('Type in your prompt here') 
 
 # Prompt templates
 title_template = PromptTemplate(
@@ -51,11 +68,3 @@ if prompt:
     st.write(title) 
     st.write(script) 
 
-    with st.expander('Title History'): 
-        st.info(title_memory.buffer)
-
-    with st.expander('Script History'): 
-        st.info(script_memory.buffer)
-
-    with st.expander('Wikipedia Research'): 
-        st.info(wiki_research)
