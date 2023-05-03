@@ -58,5 +58,10 @@ title_chain = LLMChain(llm=llm, prompt=title_template, verbose=True, output_key=
 if prompt: 
     title = title_chain.run(prompt)
     st.write(title) 
-
-
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
