@@ -60,7 +60,7 @@ if prompt:
     st.write(title) 
 hide_streamlit_style = """
             <style>
-            MainMenu {visibility: hidden;}
+            #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
             </style>
             """
@@ -71,12 +71,4 @@ no_sidebar_style = """
     </style>
 """
 st.markdown(no_sidebar_style, unsafe_allow_html=True)
-
-hide_streamlit_style = """
-<style>
-.css-hi6a2p {padding-top: 0rem;}
-</style>
-
-"""
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
