@@ -62,29 +62,9 @@ hide_streamlit_style = """
             <style>
             #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
+            .css-1y0tads {padding-top: 0rem;}
+
+
             </style>
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
-no_sidebar_style = """
-    <style>
-        div[data-testid="stSidebarNav"] {display: none;}
-    </style>
-"""
-st.markdown(no_sidebar_style, unsafe_allow_html=True)
-hide_streamlit_style = """
-<style>
-.css-hi6a2p {padding-top: 0rem;}
-</style>
-
-"""
-st.title("Test")
-if st.checkbox('Remove padding'):
-    st.markdown(hide_streamlit_style, unsafe_allow_html=True)
-    
-hide_streamlit_style = """
-<style>
-.css-hi6a2p {padding-top: 0rem;}
-</style>
-
-"""
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
