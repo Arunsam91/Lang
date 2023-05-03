@@ -65,3 +65,6 @@ hide_streamlit_style = """
             </style>
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+st.markdown("""
+.css-m70y {display:none}
+“”", unsafe_allow_html=True)
