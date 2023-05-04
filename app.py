@@ -33,8 +33,8 @@ from langchain.memory import ConversationBufferMemory
 os.environ['OPENAI_API_KEY'] = st.secrets["apikey"]
 
 
-st.title('🤖💬Unlock Your Creative Potential: Discover the Power of Prompts!')
-prompt = st.text_input('Type in your prompt here🤯') 
+st.title('🤖💬Unlock Your Creative Potential: Discover the Power of Prompts!🤯')
+prompt = st.text_input('Type in your prompt here') 
 
 
 title_template = PromptTemplate(
